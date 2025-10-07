@@ -1,0 +1,33 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "conversation_id": {
+      "type": "string",
+      "description": "ID of the conversation this message belongs to"
+    },
+    "content": {
+      "type": "string",
+      "description": "The message content"
+    },
+    "is_sent": {
+      "type": "boolean",
+      "default": true,
+      "description": "True if sent by current user, false if received"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the message was sent"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the message has been read"
+    }
+  },
+  "required": [
+    "conversation_id",
+    "content"
+  ]
+}
